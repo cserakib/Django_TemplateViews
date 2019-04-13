@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>This is My first Django Project</h2>
+<div>
+    <p>
+        NAME : {{ name|  upper }}
+       
+    </p>
+    <p>
+        COUNTRY: {{ Country | upper}}
+    </p>
+    <p>
+       {% for num in list %}
+       {% if num <= 3 %}
+       <h{{ num }}>Life is Cool, Be possibtive</h{{ num }}>
+       {% else %}
+       <h{{ num }}>Life is Cool.</h{{ num}}>
+       {% endif %}
+       {% endfor %}
+
+    </p>
+     
+</div>
+
+{% endblock %}
+
+     
